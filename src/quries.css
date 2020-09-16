@@ -1,0 +1,616 @@
+@media only screen and (max-width: 1100px) {
+  .icon-goprocess-new {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ionicon-arrow {
+    font-size: 21px;
+  }
+  /* .process-header {
+    font-size: 2rem;
+  } */
+}
+
+@media only screen and (max-width: 991px) {
+  .left-container {
+    visibility: hidden;
+    height: 0%;
+    width: 0%;
+  }
+
+  .right-container {
+    height: 100%;
+  }
+
+  .right-section {
+    position: relative;
+    top: 5%;
+    bottom: 5%;
+    left: 11%;
+    right: 11%;
+    width: 78%;
+    height: 90%;
+    background-color: #e4e6e5e5;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+
+  /* .footer-grid .footer-last {
+    height: 0;
+  } */
+
+  /* .edit-modal {
+    visibility: hidden;
+  } */
+
+  /* #signupPage {
+    visibility: hidden;
+  } */
+}
+
+@media only screen and (max-width: 769px) {
+  .logout-user {
+    display: flex;
+    /* flex-direction: column; */
+  }
+
+  .p-logout {
+    font-size: 0px;
+  }
+
+  .pageAddUser {
+    margin-top: 5.2%;
+  }
+
+  .in-alert-adduser {
+    margin-top: 2.4%;
+    margin-bottom: 2%;
+  }
+  .role {
+    margin-bottom: 0%;
+  }
+
+  .adduser-header {
+    margin-bottom: 2.5%;
+  }
+
+  /* แก้ฟ้อนให้ไอแพคเก่าแนวตั้ง */
+  .field-description-input-edit {
+    font-size: 1.5rem;
+    margin-right: 4%;
+  }
+
+  .head-userpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-welcomee {
+    color: #fff;
+    font-size: 1.9rem;
+    font-family: "Prompt";
+    font-weight: 300;
+  }
+
+  .user-welcomee-name {
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: "Prompt";
+    font-weight: 200;
+    margin: 0 0 0 0;
+    /* margin-top: 1px; */
+    /* margin-left: 8px; */
+  }
+
+  /* .head-admin-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  .img-ku-small {
+    width: 0%;
+    height: 0%;
+    margin-right: 0%;
+  }
+
+  .welcome-name {
+    margin: 0 0 0 0;
+  }
+
+  .btn-add,
+  .btn-edit {
+    font-size: 1rem;
+  }
+
+  .input-header-big-input {
+    font-size: 2.3rem;
+  }
+
+  .processnum {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-header-numprocess {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+
+  .agency-name {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .process-header-agency,
+  .process-header-agency-name {
+    font-size: 1.3rem;
+  }
+
+  /* .backAdmin { ตอนแรกไอแพไม่มี
+    width: 0px;
+    height: 0%;
+    visibility: hidden;
+  } */
+
+  /* .leftt,
+  .rightt {
+    visibility: hidden;
+  } */
+}
+
+@media only screen and (max-width: 575px) {
+  .backAdmin {
+    width: 0px;
+    height: 0%;
+    visibility: hidden;
+  }
+
+  .pageAddUser {
+    margin-top: 5.8%;
+  }
+
+  /* .img-ku-small {
+    width: 0%;
+    height: 0%;
+    margin-right: 0%;
+  } */
+  .welcome-name {
+    color: "#fff";
+    font-size: 1rem;
+    font-family: "kanit";
+    font-weight: 200;
+    margin: 0 0 0 0;
+  }
+
+  .welcome-admin {
+    color: "#fff";
+    font-size: 2rem;
+    font-family: "kanit";
+    font-weight: 400;
+  }
+
+  .p-logout {
+    visibility: hidden;
+  }
+
+  .head-userpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-welcomee {
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: "Prompt";
+    font-weight: 400;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  .user-welcomee-name {
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: "kanit";
+    font-weight: 200;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    /* margin-top: 1px; */
+    /* margin-left: 8px; */
+  }
+
+  .backlogout {
+    width: 0;
+    height: 0;
+    margin: 0 0 0 0;
+    border: 0px;
+  }
+
+  .goadminword,
+  .goadminword-admin {
+    font-size: 0;
+    /* padding: 0 0 0 0; */
+  }
+
+  .admin-word-nav-user {
+    margin-bottom: 4px;
+  }
+
+  .process-round {
+    display: block;
+    /* margin: 20px 20px 20px 20px; */
+  }
+
+  .process-round:first-child {
+    margin-top: 0px;
+  }
+
+  #ionicon-arrow {
+    font-size: 50px;
+  }
+
+  .card-number {
+    width: 100%;
+    font-size: 4.3rem;
+    font-weight: 400;
+    border-left: 0;
+    /* background-color: #2f333733; */
+    background: linear-gradient(#808a8069, #2f333728);
+    padding: 0;
+    border-top: 5px solid #535554;
+  }
+
+  .icon-goprocess {
+    border-bottom: 7px solid #535554;
+    margin-top: 0px;
+    padding-bottom: 5px;
+  }
+
+  .card-description {
+    width: 100%;
+    font-size: 1.9rem;
+    font-weight: 400;
+    background-color: rgba(245, 228, 228, 0.616);
+    /* background-color: #8da4c277; */
+  }
+
+  .process-header-agency {
+    font-size: 1.5rem;
+  }
+
+  .process-header-big {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .process-header {
+    font-size: 2.2rem;
+  }
+
+  .inputfix-round {
+    display: block;
+    /* margin-top: 20px;
+    border-radius: 10px; */
+  }
+
+  .card-inputfix-number {
+    border-left: 0;
+    border-top: 5px solid #535554;
+    width: 100%;
+    background: linear-gradient(#8eaabdbe, #8eaabd52);
+  }
+
+  .card-inputfix-descrip {
+    width: 100%;
+    font-size: 1.9rem;
+    font-weight: 400;
+  }
+
+  .card-inputfix-button {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .btn-edit {
+    background-color: #7d9146a4;
+  }
+
+  .background-inputfix {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .btn-add,
+  .btn-edit {
+    font-size: 1.3rem;
+  }
+
+  .inputfix-round:first-child {
+    margin-top: 0px;
+  }
+
+  .footer-last-bottom {
+    visibility: visible;
+    font-size: 1.1rem;
+    text-align: center;
+    height: 50px;
+  }
+
+  .input-header-big {
+    font-size: 1.8rem;
+    display: block;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 16px;
+  }
+
+  .btn-recommence {
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .edit-word,
+  .add-word {
+    font-size: 1.4rem;
+    width: 100px;
+  }
+
+  .back-user-small {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* **************************************เผื่อใช้**** */
+    /* margin-top: 5px;
+    margin-left: 10px; */
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+
+  .btn-back {
+    width: 40px;
+    height: 100%;
+    border: 0px;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .back-word {
+    font-size: 0rem;
+  }
+
+  #back-icon {
+    font-size: 38px;
+  }
+
+  .back-section {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+
+  #back-icon-hide {
+    font-size: 3rem;
+    visibility: visible;
+    position: relative;
+    top: -5px;
+    left: 15px;
+    font-size: 37px;
+    color: #35523c;
+    --ionicon-stroke-width: 18px;
+    color: rgba(49, 43, 43, 0.63);
+  }
+
+  .input-header-big-input {
+    margin-left: -15px;
+    margin-top: 5px;
+    font-size: 2.2rem;
+  }
+
+  .slash {
+    color: #03a96b;
+    font-size: 0rem;
+    position: relative;
+    top: 0px;
+    visibility: hidden;
+  }
+
+  .admin-word-nav-user {
+    margin-left: 0px;
+    margin-top: 2px;
+  }
+
+  .icon-goprocess-big {
+    width: 100%;
+  }
+
+  #ionicon-arrow {
+    font-size: 20px;
+    /* margin-top: -2px; */
+  }
+
+  .icon-goprocess-new {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    background-color: #03a96b;
+  }
+
+  .process-header {
+    font-size: 2.2rem;
+  }
+
+  .process-header-agency-name {
+    font-size: 0rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    padding: 0;
+    color: none;
+    height: 0%;
+    margin-right: 0px;
+  }
+
+  .background-inputfix {
+    margin-top: 40px;
+  }
+
+  .table-user {
+    /* margin: 0 0 0 0; */
+    /* margin-left: 20%; */
+    /* margin-right: 3%; */
+    /* margin: 3% 3% 3% 3%; */
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .welcome-head-userpage {
+    font-weight: 200;
+    font-family: "kanit";
+    font-size: 1.6rem;
+    color: #fff;
+  }
+
+  .head-admin-welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome-admin {
+    font-size: 1.4rem;
+  }
+
+  .field-description-input {
+    width: 70%;
+    font-size: 1.4rem;
+  }
+
+  .field-description-input-edit {
+    width: 70%;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .adduser-head {
+    font-size: 1.9rem;
+    /* margin-bottom: 10%; */
+  }
+
+  .filed-input-adduser {
+    display: flex;
+    flex-direction: column;
+    /* width: 90%; */
+  }
+
+  .name,
+  .phone,
+  .username,
+  .password,
+  .agency,
+  .role {
+    width: 90%;
+    margin-left: 3%;
+    /* display: flex;
+    justify-items: end; */
+  }
+
+  /* .background-img-adduser {
+    position: fixed;
+  } */
+
+  .adduser-head {
+    margin-bottom: 4%;
+    margin-top: 7%;
+  }
+
+  ion-icon {
+    font-size: 2rem;
+    margin-top: 7%;
+  }
+
+  .backAdmin {
+    width: 0px;
+    height: 0%;
+    visibility: hidden;
+  }
+
+  .process-header {
+    margin-top: 20px;
+  }
+
+  /* .img-right {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  .background-img-adduser {
+    height: 0;
+    width: 0;
+  } */
+
+  /* .logout-user {
+    margin-left: -18px;
+  } */
+}
+
+@media only screen and (max-width: 321px) {
+  .user-welcomee {
+    /* margin: 0 0 0 0; */
+    font-size: 1.5rem;
+  }
+
+  .user-welcomee-name {
+    /* margin: 0 0 0 0; */
+    font-size: 1.3rem;
+  }
+
+  .process-header-agency {
+    font-size: 1.3rem;
+  }
+
+  /* .process-header {
+      font-size: 1.8rem;
+    } */
+
+  .card-number {
+    font-size: 4.5rem;
+  }
+
+  .card-description {
+    font-size: 2.1rem;
+  }
+
+  /* .field-description-input-edit {
+    font-family: "kanit";
+    font-size: 1.7rem;
+    width: 60%;
+    margin-left: 7%;
+  } */
+  /* .img-right {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  .background-img-adduser {
+    height: 0;
+    width: 0;
+  } */
+}
