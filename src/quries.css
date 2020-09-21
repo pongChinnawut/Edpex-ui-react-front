@@ -105,6 +105,20 @@
     -o-border-radius: 8px;
   }
 
+  .adduser-head-role {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: "Prompt";
+    margin-left: 3px;
+    color: #fff;
+    margin-top: -12px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 30%;
+    height: 25px;
+  }
+
   /* .footer-grid .footer-last {
     height: 0;
   } */
@@ -122,6 +136,14 @@
   .logout-user {
     display: flex;
     /* flex-direction: column; */
+  }
+
+  #correct-modal {
+    font-size: 5rem;
+    margin-right: 5px;
+    margin-top: -5px;
+    color: #03a91fa8;
+    --ionicon-stroke-width: 70px;
   }
 
   tbody td {
@@ -168,6 +190,20 @@
     width: 58px;
     height: 20px;
     margin-right: 3px;
+  }
+
+  .adduser-head-role {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Prompt";
+    margin-left: 3px;
+    color: #fff;
+    margin-top: -12px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 40%;
+    height: 25px;
   }
 
   #input-field-adduser {
@@ -245,8 +281,17 @@
 
   /* แก้ฟ้อนให้ไอแพคเก่าแนวตั้ง */
   .field-description-input-edit {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-right: 4%;
+    width: 45%;
+  }
+
+  #input-field-adduser-modal {
+    font-size: 1.3rem;
+    height: 35px;
+    border-radius: 8px;
+    padding-left: 20px;
+    width: 90%;
   }
 
   .head-userpage {
@@ -326,6 +371,10 @@
   .process-header-agency,
   .process-header-agency-name {
     font-size: 1.3rem;
+  }
+
+  .edit-page-all {
+    margin-top: 20%;
   }
 
   /* .backAdmin { ตอนแรกไอแพไม่มี
@@ -446,6 +495,55 @@
     flex-direction: column;
     text-align: center;
   } */
+
+  .edit-page-all {
+    margin-top: 30%;
+  }
+
+  .filed-input-adduser-modal {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+  }
+
+  #input-field-adduser-modal {
+    background-color: #e4e6e573;
+    font-size: 1.4rem;
+    font-family: "Prompt";
+    font-weight: 300;
+    height: 33px;
+    padding-left: 20px;
+    width: 100%;
+    border: 1px solid #6366653b;
+  }
+
+  .error-helptext-modal-edit {
+    margin-bottom: 0px;
+  }
+
+  .extra-status {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .status-switch {
+    margin-top: 3px;
+    margin-bottom: 10px;
+  }
+
+  .adduser-head-role {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: "Prompt";
+    margin-left: 3px;
+    color: #fff;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 60%;
+    height: 20px;
+  }
 
   .pageAddUser {
     margin-top: 50px;
@@ -828,6 +926,12 @@
   }
 }
 
+@media only screen and (width: 540px) {
+  .edit-page-all {
+    margin-top: 15%;
+  }
+}
+
 @media only screen and (max-width: 420px) {
   .welcome-head-userpage {
     font-weight: 200;
@@ -1044,6 +1148,10 @@
 }
 
 @media only screen and (max-width: 321px) {
+  .edit-page-all {
+    margin-top: 10%;
+  }
+
   .user-welcomee {
     /* margin: 0 0 0 0; */
     font-size: 1.5rem;

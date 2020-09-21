@@ -534,7 +534,7 @@ export default function AddUser(props) {
                     className="custom-select "
                     // onChange={handleChange}
                     onChange={(e) => {
-                      setagency(e.target.value);
+                      setagency(e.target.value * 1 + 1);
                       setErrorAgency(false);
                     }}
                     id="input-field-adduser"

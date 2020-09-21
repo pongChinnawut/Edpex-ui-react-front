@@ -16,6 +16,7 @@ export default function TableUser(props) {
   const [password, setpassword] = React.useState("");
   const [role, setrole] = React.useState("");
   const [agency, setagency] = React.useState("");
+  const [agency_descrip, setagency_descrip] = React.useState("");
   const [status, setStatus] = React.useState("");
   const [offset, setoffset] = React.useState(0);
   const [perPage, setperPage] = React.useState(8);
@@ -191,6 +192,7 @@ export default function TableUser(props) {
                                     : "nullNull"
                                 );
                                 setagency(user.agency.id);
+                                setagency_descrip(user.agency.name);
                                 setStatus(user.status);
                               }}
                             >
@@ -214,6 +216,7 @@ export default function TableUser(props) {
                                     : "nullNull"
                                 );
                                 setagency(user.agency.id);
+                                setagency_descrip(user.agency.name);
                                 setStatus(user.status);
                               }}
                             >
@@ -333,7 +336,7 @@ export default function TableUser(props) {
           username={username}
           password={password}
           role={role}
-          agency={agency}
+          agency={{ id: agency, name: agency_descrip }}
           status={status}
         />
       ) : (
