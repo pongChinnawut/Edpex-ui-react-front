@@ -1,4 +1,15 @@
 @media only screen and (max-width: 1100px) {
+  .total-user {
+    font-family: "Prompt";
+    font-size: 1.2rem;
+    width: 17%;
+    height: 30px;
+  }
+
+  th {
+    font-size: 1.4rem;
+  }
+
   .icon-goprocess-new {
     display: flex;
     flex-direction: column;
@@ -17,6 +28,61 @@
     visibility: hidden;
     height: 0%;
     width: 0%;
+  }
+
+  .background-tableuser {
+    margin-top: 80px;
+  }
+
+  tbody td {
+    font-size: 1.2rem;
+  }
+
+  th {
+    font-size: 1.3rem;
+  }
+
+  .total-user {
+    margin-top: 10px;
+  }
+
+  .label-in-role {
+    font-family: "Prompt";
+    font-size: 1rem;
+    font-weight: 500;
+    width: 75px;
+    height: 25px;
+  }
+
+  #btnSuccess {
+    font-size: 1.7rem;
+    font-weight: 500;
+    width: 100%;
+    height: 80%;
+  }
+
+  .adduser-head {
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .div-alert {
+    margin-bottom: 10px;
+  }
+
+  .pageAddUser {
+    margin-top: 80px;
+  }
+
+  #input-field-adduser {
+    background-color: #e4e6e573;
+    font-size: 1.4rem;
+    font-family: "Prompt";
+    font-weight: 300;
+  }
+
+  #adduser-top {
+    padding-top: 20px;
   }
 
   .right-container {
@@ -58,12 +124,97 @@
     /* flex-direction: column; */
   }
 
+  tbody td {
+    font-size: 1.2rem;
+  }
+
+  .total-user {
+    font-family: "Prompt";
+    font-size: 1.1rem;
+    width: 20%;
+    height: 30px;
+  }
+
+  th {
+    font-size: 1.3rem;
+  }
+
+  .btn-table-head {
+    font-size: 1.1rem;
+  }
+
+  .head-admin-welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #btnSuccess {
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 100%;
+    height: 80%;
+  }
+
+  .background-tableuser {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .label-in-role {
+    font-family: "Prompt";
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 58px;
+    height: 20px;
+    margin-right: 3px;
+  }
+
+  #input-field-adduser {
+    background-color: #e4e6e573;
+    font-size: 1.4rem;
+    font-family: "Prompt";
+    font-weight: 300;
+    height: 42px;
+  }
+
+  #rolee {
+    width: 50%;
+  }
+
+  .role-option {
+    width: 50%;
+    position: relative;
+    left: 6px;
+  }
+
+  .backlogout {
+    width: 0;
+    height: 0;
+    margin: 0 0 0 0;
+    border: 0px;
+  }
+
+  .goadminword,
+  .goadminword-admin {
+    font-size: 0;
+    /* padding: 0 0 0 0; */
+  }
+
   .p-logout {
     font-size: 0px;
   }
 
   .pageAddUser {
-    margin-top: 5.2%;
+    /* margin-top: 5.2%; */
+    margin-top: 100px;
+  }
+
+  #success-icon,
+  #warning-icon {
+    margin-right: 1px;
+    margin-top: -1px;
+    font-size: 3.9rem;
   }
 
   .in-alert-adduser {
@@ -75,7 +226,21 @@
   }
 
   .adduser-header {
-    margin-bottom: 2.5%;
+    margin-bottom: 0px;
+    /* margin-top: 0px; */
+    /* font-size: 3rem; */
+  }
+
+  .adduser-head {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: "Prompt";
+    /* margin-bottom: 5%;
+    margin-top: 4.5%; */
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
   }
 
   /* แก้ฟ้อนให้ไอแพคเก่าแนวตั้ง */
@@ -97,6 +262,16 @@
     font-weight: 300;
   }
 
+  .adduser-head-table {
+    font-size: 3.3rem;
+    font-weight: 800;
+    font-family: "Prompt";
+    margin-top: 20px;
+    margin-bottom: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
   .user-welcomee-name {
     color: #fff;
     font-size: 1.4rem;
@@ -114,8 +289,8 @@
   } */
 
   .img-ku-small {
-    width: 0%;
-    height: 0%;
+    width: 0;
+    height: 0;
     margin-right: 0%;
   }
 
@@ -165,15 +340,181 @@
   } */
 }
 
+/* เอาไว้แก้แค่ไอแพด มันเจอบาร์แอดมินจัดเป๋นคอลัม */
+@media only screen and (width: 768px) {
+  .background-tableuser {
+    margin-top: 80px;
+  }
+
+  th {
+    font-size: 1.1rem;
+  }
+
+  .total-user {
+    margin-top: 10px;
+  }
+
+  tbody td {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .background-tableuser {
+    margin-top: 40px;
+  }
+
+  #index-no {
+    font-size: 2rem;
+  }
+
+  .adduser-head-table {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: "Prompt";
+    margin-top: 10px;
+    margin-bottom: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  tbody th {
+    /* background-color: #03a96ca1; */
+    background: -webkit-linear-gradient(bottom, #03a96cb4, #03a96c73);
+  }
+
+  tbody td {
+    font-family: "Prompt";
+    font-weight: 300;
+    font-size: 1.7rem;
+  }
+
+  .role-in-table {
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 80px;
+    padding: 5px 0px 5px 0px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pagination {
+    font-family: "Prompt";
+    font-size: 1.4rem;
+    margin: 15px auto;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    outline: none;
+    width: 100%;
+  }
+
+  .pagination-big {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .total-user {
+    font-size: 1.4rem;
+    width: 40%;
+    height: 26px;
+    background-color: #2f333757;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+}
+
 @media only screen and (max-width: 575px) {
+  .img-ku-small {
+    width: 0px;
+    height: 0px;
+    /* margin-right: 9px; */
+  }
+
+  /* .head-admin-welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  } */
+
+  .pageAddUser {
+    margin-top: 50px;
+  }
+
+  .background-adduser {
+    margin-left: 0px;
+    margin-top: 60px;
+  }
+
+  .adduser-head-table {
+    font-size: 3.5rem;
+  }
+
+  .adduser-header {
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+  }
+
+  .adduser-head {
+    font-size: 3.1rem;
+    font-weight: 800;
+    font-family: "Prompt";
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .label-in-role {
+    font-family: "Prompt";
+    font-size: 0.8rem;
+    font-weight: 500;
+    width: 58px;
+    height: 20px;
+    margin-right: 3px;
+  }
+
+  #input-field-adduser {
+    background-color: #e4e6e573;
+    font-size: 1.2rem;
+    font-family: "Prompt";
+    font-weight: 300;
+    height: 39px;
+  }
+
+  .field-description-input {
+    font-size: 1.5rem;
+  }
+
   .backAdmin {
     width: 0px;
     height: 0%;
     visibility: hidden;
   }
 
-  .pageAddUser {
-    margin-top: 5.8%;
+  #icon-in-list {
+    position: relative;
+    left: 0px;
+  }
+
+  #mix-function {
+    padding: 10px 18px 0px 18px;
+    /* background-color: #03a96b; */
   }
 
   /* .img-ku-small {
@@ -183,7 +524,7 @@
   } */
   .welcome-name {
     color: "#fff";
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: "kanit";
     font-weight: 200;
     margin: 0 0 0 0;
@@ -225,19 +566,18 @@
     /* margin-top: 1px; */
     /* margin-left: 8px; */
   }
-
+  /* 
   .backlogout {
     width: 0;
     height: 0;
     margin: 0 0 0 0;
     border: 0px;
-  }
+  } */
 
-  .goadminword,
+  /* .goadminword,
   .goadminword-admin {
     font-size: 0;
-    /* padding: 0 0 0 0; */
-  }
+  } */
 
   .admin-word-nav-user {
     margin-bottom: 4px;
@@ -325,6 +665,10 @@
   .background-inputfix {
     padding: 20px;
     margin-bottom: 20px;
+  }
+
+  .userscreen-fixinput {
+    padding: 10px 20px 10px 20px;
   }
 
   .btn-add,
@@ -449,6 +793,13 @@
     font-size: 2.2rem;
   }
 
+  #success-icon,
+  #warning-icon {
+    margin-right: 1px;
+    margin-top: -1px;
+    font-size: 3.9rem;
+  }
+
   .process-header-agency-name {
     font-size: 0rem;
     font-weight: 400;
@@ -485,14 +836,136 @@
     color: #fff;
   }
 
-  .head-admin-welcome {
+  #adduser-top {
+    padding-top: 20px;
+  }
+
+  /* .head-admin-welcome {
     display: flex;
     flex-direction: column;
     text-align: center;
+  } */
+
+  .adduser-head-table {
+    font-size: 3.5rem;
+  }
+
+  #btnSuccess {
+    font-size: 1.5rem;
+    width: 100%;
+    height: 80%;
+  }
+
+  /* .adduser-head {
+    font-size: 3.1rem;
+    font-weight: 800;
+    font-family: "Prompt";
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+  } */
+
+  .filed-input-adduser-alert {
+    width: 80%;
+    height: 30px;
+    margin-bottom: 3%;
+    font-size: 1.3rem;
+    font-family: "Prompt";
+    font-weight: 400;
+  }
+
+  #input-field-adduser {
+    height: 37px;
+  }
+
+  #success-icon,
+  #warning-icon {
+    margin-right: 1px;
+    margin-top: -1px;
+    font-size: 3rem;
+  }
+
+  .role-option {
+    margin-top: 6px;
+    margin-bottom: 13px;
+    /* text-align: end; */
+  }
+
+  .label-in-role {
+    font-family: "Prompt";
+    font-size: 0.7rem;
+    font-weight: 500;
+    width: 55px;
+    height: 15px;
+    margin-right: 3px;
+  }
+
+  .field-description-input {
+    margin-bottom: 4px;
+    margin-left: 10px;
+  }
+
+  .pageAddUser {
+    margin-top: 40px;
+  }
+
+  .name-and-phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    /* width: 100%; */
+  }
+
+  .username-and-password {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+  }
+
+  .role-and-role {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .role-description {
+    width: 100%;
+  }
+
+  #rolee {
+    width: 100%;
+  }
+
+  #inName {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  #inPhone {
+    width: 100%;
+  }
+
+  #inUsername {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  #inPassword {
+    width: 100%;
+  }
+
+  .background-adduser {
+    /* background: #c1c9c5; */
+    background-color: rgba(255, 255, 255, 0.397);
+    box-shadow: 0px 0px 7px 0px rgba(10, 10, 10, 0.178);
+    width: 100%;
+    height: 100% inherit;
+    margin-left: 0px;
+    padding: 10px;
   }
 
   .welcome-admin {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .field-description-input {
@@ -508,7 +981,7 @@
   }
 
   .adduser-head {
-    font-size: 1.9rem;
+    font-size: 2.5rem;
     /* margin-bottom: 10%; */
   }
 
@@ -535,8 +1008,8 @@
   } */
 
   .adduser-head {
-    margin-bottom: 4%;
-    margin-top: 7%;
+    /* margin-bottom: 4%;
+    margin-top: 7%; */
   }
 
   ion-icon {
@@ -585,6 +1058,15 @@
     font-size: 1.3rem;
   }
 
+  .adduser-head {
+    font-size: 2rem;
+    /* margin-bottom: 10%; */
+  }
+
+  .adduser-head-table {
+    font-size: 2.9rem;
+  }
+
   /* .process-header {
       font-size: 1.8rem;
     } */
@@ -595,6 +1077,12 @@
 
   .card-description {
     font-size: 2.1rem;
+  }
+
+  .tableuser-page {
+    margin: 10% 3% 3% 3%; /* ปรับไปแค่บนล่าง*/
+    background-color: "#E4E6E5";
+    height: 100%;
   }
 
   /* .field-description-input-edit {

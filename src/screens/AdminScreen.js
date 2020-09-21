@@ -41,8 +41,9 @@ import {
   fadeOutRightBig,
   flipInX,
 } from "react-animations";
+import { yellow } from "@material-ui/core/colors";
 
-const drawerWidth = 260;
+const drawerWidth = 250;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -74,12 +75,15 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
     flexShrink: 0,
     whiteSpace: "nowrap",
+    // backgroundColor: "#e4e6e5",
+    // height: `100vh`,
   },
   drawerOpen: {
     width: drawerWidth,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
+      // backgroundColor: "#000",
     }),
   },
   drawerClose: {
@@ -107,7 +111,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     // padding: theme.spacing(3, 5), //อันแรกบนล่าง อัยสองซ้ายขวา
     backgroundColor: "#e4e6e5",
-    height: `100vh`,
+    minHeight: `100vh`,
     // width: `100%`,
   },
 }));
@@ -131,6 +135,10 @@ export default function AdminScreen(props) {
   // const qty = props.location.search //เอาค่าจาก ? แต่ต้องมา split
   //   ? props.location.search.split("=")[1] * 1
   //   : 1;
+
+  const Flip = styled.div`
+    animation: 3s ${keyframes`${flipInX}`} infinite;
+  `;
 
   React.useEffect(() => {
     // setShowAddUser(false);
@@ -227,7 +235,7 @@ export default function AdminScreen(props) {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar className="navbar-head" style={{ background: "#006765" }}>
+        <Toolbar className="navbar-head" style={{ background: " #2f3337" }}>
           {/* <div className="left-close-open"> */}
           <IconButton
             color="inherit"
@@ -245,7 +253,9 @@ export default function AdminScreen(props) {
 
           <Typography>
             <div className="head-admin-welcome">
-              <img src="kusmall.png" className="img-ku-small"></img>
+              <Flip>
+                <img src="ku4.png" className="img-ku-small"></img>
+              </Flip>
 
               <strong className="welcome-admin"> ยินดีต้อนรับคุณ </strong>
               <font className="welcome-name">
@@ -256,14 +266,7 @@ export default function AdminScreen(props) {
                   className="head-nav-admin"
                   style={{ display: "flex", alignItems: "center" }}
                 >
-                  <span
-                    className="goadminword-user"
-                    style={{
-                      color: "#000",
-                    }}
-                  >
-                    ADMIN
-                  </span>
+                  <span className="goadminword-user">ADMIN</span>
                 </div>
               </div>
             </div>
@@ -293,7 +296,7 @@ export default function AdminScreen(props) {
             </div>
             <div className="logo-logout-navbar">
               <ExitToAppIcon
-                style={{ fontSize: 35, color: "#fff", marginRight: `-20px` }}
+                style={{ fontSize: 35, color: "#03a96c", marginRight: `-20px` }}
               />
             </div>
           </div>
@@ -314,32 +317,22 @@ export default function AdminScreen(props) {
             [classes.drawerClose]: !open,
           }),
         }}
+        // style={{ backgroundColor: "#000", height: `100vh` }}
       >
-        {/* <div className={classes.toolbar}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon style={{ fontSize: 30 }}>
-                <h3>ฟังก์ชันการใช้งาน</h3>
-              </ChevronLeftIcon>
-            )}
-          </IconButton>
-        </div> */}
-
         <Divider />
-        <List style={{ marginTop: -8 }}>
+        <List id="listt">
           <ListItem
             Button
-            style={{ background: "#006765c0" }}
+            className="function-header"
+            // style={{ background: "#006765c0" }}
             onClick={handleDrawerClose}
           >
             <ListItemIcon>
               <IconButton style={{ padding: 0 }}>
                 <ChevronLeftIcon
                   style={{
-                    fontSize: 40,
-                    color: "#b2dfdb",
+                    fontSize: 50,
+                    color: "#03a96b",
                     marginRight: 5,
                   }}
                 />
@@ -348,9 +341,9 @@ export default function AdminScreen(props) {
                 primary={
                   <Typography
                     style={{
-                      color: "#e0f2f1",
-                      fontSize: 17,
-                      fontFamily: "kanit",
+                      color: "#E4E6E5",
+                      fontSize: 19,
+                      fontFamily: "Prompt",
                       fontWeight: 500,
                       marginTop: 6,
                     }}
@@ -362,141 +355,88 @@ export default function AdminScreen(props) {
             </ListItemIcon>
           </ListItem>
           {/* <Link to={"/adduser"} style={{ textDecoration: "none" }}> */}
-          <ListItem button onClick={callAddUser} style={{ padding: 18 }}>
+          <ListItem
+            button
+            onClick={callAddUser}
+            id="mix-function"
+            // id="adduser-top"
+            // style={{ paddingTop: `30px` }}
+          >
             <ListItemIcon>
-              <PersonAddIcon
-                style={{
-                  fontSize: 25,
-                  color: "#006765",
-                }}
-              />
+              <PersonAddIcon id="icon-in-list" />
             </ListItemIcon>
             <ListItemText
               primary={
-                <Typography
-                  style={{
-                    color: "#000",
-                    fontSize: 16,
-                    fontFamily: "kanit",
-                    fontWeight: 200,
-                  }}
-                >
-                  เพิ่มข้อมูลผู้ใช้งาน
-                </Typography>
+                <Typography id="word-in-list">เพิ่มข้อมูลผู้ใช้งาน</Typography>
               }
             />
           </ListItem>
-          <Divider />
+          {/* <Divider /> */}
           {/* </Link> */}
           {/* <Link to={"/tableuser"} style={{ textDecoration: "none" }}> */}
-          <ListItem button onClick={callUserTable} style={{ padding: 15 }}>
+          <ListItem
+            button
+            onClick={callUserTable}
+            // style={{ padding: 15 }}
+            id="mix-function"
+          >
             <ListItemIcon>
-              <AccountBoxIcon
-                style={{
-                  fontSize: 25,
-                  color: "#006765",
-                }}
-              />
+              <AccountBoxIcon id="icon-in-list" />
             </ListItemIcon>
             <ListItemText
               primary={
-                <Typography
-                  style={{
-                    color: "#000",
-                    fontSize: 16,
-                    fontFamily: "kanit",
-                    fontWeight: 200,
-                  }}
-                >
-                  ข้อมูลผู้ใช้งานระบบ
-                </Typography>
+                <Typography id="word-in-list">ข้อมูลผู้ใช้งานระบบ</Typography>
               }
             />
           </ListItem>
-          <Divider />
+          {/* <Divider /> */}
           {/* </Link> */}
           <Link to={"/processuser"} style={{ textDecoration: "none" }}>
-            <ListItem button>
+            <ListItem button id="mix-function">
               <ListItemIcon>
-                <EditIcon
-                  style={{
-                    fontSize: 25,
-                    color: "#006765",
-                  }}
-                />
+                <EditIcon id="icon-in-list" />
               </ListItemIcon>
               <ListItemText
                 primary={
-                  <Typography
-                    style={{
-                      color: "#000",
-                      fontSize: 16,
-                      fontFamily: "kanit",
-                      fontWeight: 200,
-                    }}
-                  >
+                  <Typography id="word-in-list">
                     เพิ่ม / แก้ไขกระบวนการ
                   </Typography>
                 }
               />
             </ListItem>
-            <Divider />
+            {/* <Divider /> */}
           </Link>
           <Link to={"/adduser"} style={{ textDecoration: "none" }}>
-            <ListItem button style={{ padding: 15 }}>
+            <ListItem
+              button
+              // style={{ padding: 15 }}
+              id="mix-function"
+            >
               <ListItemIcon>
-                <EqualizerIcon
-                  style={{
-                    fontSize: 25,
-                    color: "#006765",
-                  }}
-                />
+                <EqualizerIcon id="icon-in-list" />
               </ListItemIcon>
               <ListItemText
                 primary={
-                  <Typography
-                    style={{
-                      color: "#000",
-                      fontSize: 16,
-                      fontFamily: "kanit",
-                      fontWeight: 200,
-                    }}
-                  >
-                    รายงานผลลัพธ์
-                  </Typography>
+                  <Typography id="word-in-list">รายงานผลลัพธ์</Typography>
                 }
               />
             </ListItem>
-            <Divider />
+            {/* <Divider /> */}
           </Link>
           <Link to={"/adduser"} style={{ textDecoration: "none" }}>
-            <ListItem button style={{ padding: 15 }}>
+            <ListItem button id="mix-function">
               <ListItemIcon>
-                <SettingsPowerIcon
-                  style={{
-                    fontSize: 25,
-                    color: "#006765",
-                  }}
-                />
+                <SettingsPowerIcon id="icon-in-list" />
               </ListItemIcon>
               <ListItemText
                 primary={
-                  <Typography
-                    style={{
-                      color: "#000",
-                      fontSize: 16,
-                      fontFamily: "kanit",
-                      fontWeight: 200,
-                    }}
-                  >
-                    เปิด / ปิดระบบ
-                  </Typography>
+                  <Typography id="word-in-list">เปิด / ปิดระบบ</Typography>
                 }
               />
             </ListItem>
           </Link>
         </List>
-        <Divider />
+        {/* <Divider /> */}
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />

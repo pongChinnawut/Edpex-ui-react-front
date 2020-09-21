@@ -11,6 +11,7 @@ import ProcessUser from "./screens/ProcessUser";
 import TestMapOutput from "./screens/TestMapOutput7";
 import ProcessUserEdit from "./screens/ProcessUserButton";
 import TestNon from "./screens/TestNon";
+import TestFormik from "./screens/TestFormik";
 // import TestModalMDB from "./screens/TestModalMDB";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
@@ -32,6 +33,8 @@ function App() {
         <Route path="/inputfix" component={ProcessUserEdit}></Route>
         <Route path="/mapoutput7" component={TestMapOutput}></Route>
         <Route path="/testnon" component={TestNon}></Route>
+        <Route path="/formik" component={TestFormik}></Route>
+
         {/* <Route path="/adduser" component={AddUser}></Route> */}
       </div>
     </BrowserRouter>

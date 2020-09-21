@@ -86,7 +86,11 @@ export default function ProcessUserButton(props) {
                       }`}</span>
                       <span className="card-inputfix-descrip">{process}</span>
                       <div className="card-inputfix-button">
-                        <button className="btn-add">
+                        <button
+                          className="btn-add"
+                          data-toggle="modal"
+                          data-target="#exampleModalCenter"
+                        >
                           <div
                             style={{
                               display: "flex",
@@ -100,10 +104,10 @@ export default function ProcessUserButton(props) {
                               style={{ fontSize: `20px`, marginTop: `-2px` }}
                             ></ion-icon>
                             <span
-                              // type="button"
-                              // class="btn btn-primary"
-                              data-toggle="modal"
-                              data-target="#exampleModalCenter"
+                            // type="button"
+                            // class="btn btn-primary"
+                            // data-toggle="modal"
+                            // data-target="#exampleModalCenter"
                             >
                               เพิ่มข้อมูล
                             </span>
