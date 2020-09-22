@@ -327,6 +327,15 @@
     /* margin-left: 8px; */
   }
 
+  #input-field-adduser-modal-password {
+    height: 30px;
+    /* margin-bottom: 6px; */
+  }
+
+  #text-changepassword {
+    font-size: 1.3rem;
+  }
+
   /* .head-admin-welcome {
     display: flex;
     flex-direction: column;
@@ -375,6 +384,10 @@
 
   .edit-page-all {
     margin-top: 20%;
+  }
+
+  #input-field-adduser-modal-password {
+    width: 90%;
   }
 
   /* .backAdmin { ตอนแรกไอแพไม่มี
@@ -495,6 +508,15 @@
     flex-direction: column;
     text-align: center;
   } */
+
+  #input-field-adduser-modal-password {
+    width: 100%;
+  }
+
+  #text-changepassword {
+    font-size: 1.3rem;
+    color: #006765;
+  }
 
   .edit-page-all {
     margin-top: 30%;

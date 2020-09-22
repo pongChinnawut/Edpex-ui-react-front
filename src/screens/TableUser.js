@@ -1,6 +1,7 @@
 import React from "react";
 import Axios from "axios";
 import EditUser from "./EditModal";
+import DeleteUser from "./EditModalDelete";
 import ReactPaginate from "react-paginate";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 // import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
@@ -8,6 +9,7 @@ import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 export default function TableUser(props) {
   const [userInfo, setUserInfo] = React.useState([]);
   const [showEditModal, setshowEditModal] = React.useState(false);
+  const [showDeleteModal, setshowDeleteModal] = React.useState(false);
   const [markup, setmarkup] = React.useState("");
   const [user_id, setId] = React.useState("");
   const [name, setname] = React.useState("");
@@ -203,7 +205,7 @@ export default function TableUser(props) {
                               id="btn-dell"
                               onClick={() => {
                                 // setmarkup(<EditUser />);
-                                setshowEditModal(true);
+                                setshowDeleteModal(true);
                                 // console.log(showEditModal);
                                 setId(user.id);
                                 setname(user.name);
@@ -329,6 +331,21 @@ export default function TableUser(props) {
       </div>
       {showEditModal ? (
         <EditUser
+          // showModalll={true}
+          id={user_id}
+          name={name}
+          phone={phone}
+          username={username}
+          password={password}
+          role={role}
+          agency={{ id: agency, name: agency_descrip }}
+          status={status}
+        />
+      ) : (
+        ""
+      )}
+      {showDeleteModal ? (
+        <DeleteUser
           // showModalll={true}
           id={user_id}
           name={name}

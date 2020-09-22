@@ -926,6 +926,108 @@ td {
   font-size: 4.5rem;
 }
 
+/* ********************************************************************** */
+/* ////////////////////////////// Delete USER MODAL */
+/* ********************************************************************** */
+.delete-user-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nameUser-of-delete {
+  font-family: "Prompt";
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* .swal-modal {
+  background-color: #e4e6e5;
+  border: 0px solid white;
+} */
+
+/* .swal-overlay {
+  background-color: rgba(43, 165, 137, 0.45);
+} */
+
+.divider {
+  width: 100%;
+  color: #000;
+  /* background-color: #000; */
+}
+
+.deleteuser-head {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Prompt";
+  margin-top: 2px;
+  margin-bottom: 5px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#delete-modal-icon {
+  color: red;
+  font-size: 7rem;
+  --ionicon-stroke-width: 30px;
+  margin-top: 15px;
+}
+
+.confirm-delete-btn {
+  display: flex;
+  justify-content: center;
+  font-family: "Prompt";
+  font-size: 1.8rem;
+  font-weight: 200;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.btn-submit-delete {
+  color: #fff;
+  background-color: rgba(255, 0, 0, 0.616);
+  width: 120px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  margin-right: 8px;
+}
+
+.btn-submit-delete:hover {
+  cursor: pointer;
+  background-color: rgb(255, 0, 0);
+}
+
+.btn-cancle-delete {
+  color: #000;
+  border: 1px solid red;
+  /* background-color: red; */
+  width: 120px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.btn-cancle-delete:hover {
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.123);
+}
+
 /******************************************************************************
 ////////////////////////////// EDIT MODAL
 ******************************************************************************/
@@ -989,6 +1091,132 @@ td {
   border: 1px solid #6366653b;
 }
 
+.btn-changepassword {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btn-change-submit {
+  font-family: "Prompt";
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 300;
+  background-color: #03a94e;
+  padding: 1px 20px 1px 20px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  margin-right: 8px;
+}
+
+.btn-change-submit:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #03a94e83;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.btn-change-cancle {
+  font-family: "Prompt";
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 300;
+  background-color: rgba(211, 9, 9, 0.842);
+  padding: 1px 20px 1px 20px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.btn-change-cancle:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: rgba(255, 0, 0, 0.39);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+#changePassword {
+  background-color: #e4e6e573;
+  font-size: 1.2rem;
+  font-family: "Prompt";
+  font-weight: 300;
+  height: 30px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  padding-left: 20px;
+  width: 100%;
+  border: 1px solid #6366653b;
+}
+
+#input-field-adduser-modal-password {
+  background-color: #e4e6e5;
+  /* font-size: 1rem; */
+  font-family: "Prompt";
+  font-weight: 300;
+  height: 35px;
+  width: 80%;
+  /* border: 1px solid #6366653b; */
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  margin-bottom: 6px;
+  /* margin-left: -40px; */
+}
+
+#text-changepassword {
+  font-family: "Prompt";
+  font-weight: 300;
+  font-size: 1.4rem;
+  color: #006765;
+}
+
+.cardd {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0px solid yellow;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  z-index: 999999;
+}
+
+.card-headerr {
+  background-color: #e4e6e5;
+  /* padding: 0.75rem 1rem; */
+  padding: 4px 4px 4px 4px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border: 1px solid #6366653b;
+  border-bottom: 1px solid #6366653b;
+}
+
 .btn-lg {
   /*font-size: 2.5rem;
   */
@@ -1006,19 +1234,19 @@ td {
 }
 
 .ddanger {
-  background-color: rgba(255, 0, 0, 0.678);
+  background-color: rgba(255, 0, 0, 0.808);
 }
 
 .ssuccess {
-  background-color: #03a96ccb;
+  background-color: #03a96c;
 }
 
 .ddanger:hover {
-  background-color: rgba(255, 0, 0, 0.795);
+  background-color: rgba(255, 0, 0, 0.603);
 }
 
 .ssuccess:hover {
-  background-color: #03a96ce5;
+  background-color: #03a96cb4;
 }
 
 /* background-color: rgba(255, 255, 255, 0.397);

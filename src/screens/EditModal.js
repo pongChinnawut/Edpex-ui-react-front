@@ -29,6 +29,11 @@ export default function EditModal(props) {
   const [role, setrole] = React.useState(props.role);
   const [iconCorrect, seticonCorrect] = React.useState(false);
   const [errAgency, setErrorAgency] = React.useState(false);
+  const [oldPassword, setOldPassword] = React.useState(props.password);
+  const [newPassword, setNewPassword] = React.useState("");
+  const [changePassword, setchangePassword] = React.useState("");
+  const [clickSubmit_password, setclickSubmit_password] = React.useState(false);
+  const [confirmSubmit, setconfirmSubmit] = React.useState(false);
   // const [statusCheck, setStatusCheck] = React.useState(
   //   props.status == 1 ? true : false
   // );
@@ -45,6 +50,10 @@ export default function EditModal(props) {
   //   "สำนักบริการกลางวิทยาเขตกำแพงแสน",
   //   "งานบริการซ่อมบำรุงเครื่องมือวัสดุ",
   // ];
+
+  React.useEffect(() => {
+    checkSubmitchange();
+  }, [newPassword]);
 
   const roless = ["ADMIN", "USER", "EXCUTIVE"];
 
@@ -70,9 +79,9 @@ export default function EditModal(props) {
     if (!values.username) {
       errors.username = "กรุณากรอกชื่อผู้ใช้งาน";
     }
-    if (!values.password) {
-      errors.password = "กรุณากรอกรหัสผ่าน";
-    }
+    // if (!values.password) {
+    //   errors.password = "กรุณากรอกรหัสผ่าน";
+    // }
 
     return errors;
   };
@@ -82,14 +91,14 @@ export default function EditModal(props) {
       name: props.name,
       phone: props.phone,
       username: props.username,
-      password: props.password,
+      // password: props.password,
     },
     validate,
     validationSchema: Yup.object({
       name: Yup.string().required("Required!"),
       phone: Yup.string().required("Required!"),
       username: Yup.string().required("Required!"),
-      password: Yup.string().required("Required!"),
+      // password: Yup.string().required("Required!"),
     }),
     onSubmit(values) {
       if (agency.id != "") {
@@ -98,8 +107,8 @@ export default function EditModal(props) {
         callSetPattern(
           values.name,
           zero.concat(values.phone.toString()),
-          values.username,
-          values.password
+          values.username
+          // values.password
         );
       }
     },
@@ -113,7 +122,7 @@ export default function EditModal(props) {
     }
   };
 
-  const callSetPattern = async (name, phone, username, password) => {
+  const callSetPattern = async (name, phone, username) => {
     console.log("callPattern");
     console.log("status in patter =  " + status);
 
@@ -125,10 +134,26 @@ export default function EditModal(props) {
     //   await callEditApi(name, phone, username, password);
     // }
 
-    callEditApi(name, phone, username, password);
+    callEditApi(name, phone, username);
   };
 
-  const callEditApi = (name, phone, username, password) => {
+  const checkSubmitchange = () => {
+    // setNewPassword(e);
+    if (newPassword != "") {
+      setclickSubmit_password(true);
+    } else {
+      setNewPassword("");
+      setOldPassword(props.password);
+      setclickSubmit_password(false);
+      setconfirmSubmit(false);
+    }
+  };
+
+  const callEditApi = (name, phone, username) => {
+    let password = oldPassword;
+    if (confirmSubmit && newPassword != "") {
+      password = newPassword;
+    }
     console.log("callAPi");
     // console.log(statusCheck);
     console.log(status);
@@ -318,7 +343,7 @@ export default function EditModal(props) {
                   </div>
                 </div>
               </Form.Group>
-              <Form.Group controlId="validationFormik103" className="formgroup">
+              {/* <Form.Group controlId="validationFormik103" className="formgroup">
                 <div className="filed-input-adduser-modal">
                   <Form.Label className="field-description-input-edit">
                     รหัสผ่าน
@@ -339,12 +364,6 @@ export default function EditModal(props) {
                       value={values.password}
                       // isInvalid={errors.password}
                       id="input-field-adduser-modal"
-                      // style={{
-                      //   backgroundColor: "#e4e6e5",
-                      //   fontSize: 14,
-                      //   fontFamily: "kanit",
-                      //   fontWeight: 100,
-                      // }}
                     />
                     {errors.name && touched.password && (
                       <p className="error-helptext-modal-edit">
@@ -353,7 +372,97 @@ export default function EditModal(props) {
                     )}
                   </div>
                 </div>
-              </Form.Group>
+              </Form.Group> */}
+              {/* <Form.Group controlId="validationFormik103" className="formgroup"> */}
+              <div className="filed-input-adduser-modal">
+                <Form.Label className="field-description-input-edit">
+                  รหัสผ่าน
+                </Form.Label>
+                <div className="username">
+                  <div id="input-field-adduser-modal-password">
+                    <div className="accordion" id="accordionExample ">
+                      <div class="cardd">
+                        <div className="card-headerr" id="headingTwo">
+                          <h2 class="mb-0">
+                            <button
+                              class="btn  btn-block text-left collapsed"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="collapseTwo"
+                              id="text-changepassword"
+                            >
+                              {newPassword
+                                ? `รหัสผ่านใหม่ คือ ${newPassword}`
+                                : "ต้องการตั้งรหัสผ่านใหม่"}
+                            </button>
+                          </h2>
+                        </div>
+                        <div
+                          id="collapseTwo"
+                          class={`collapse ${changePassword}`}
+                          aria-labelledby="headingTwo"
+                          data-parent="#accordionExample"
+                        >
+                          <div class="card-body">
+                            <div className="password">
+                              <Form.Control
+                                // type="text"
+                                placeholder="กรุณาใส่รหัสผ่านใหม่"
+                                value={`${newPassword}`}
+                                // className={`form-control ${
+                                //   touched.password
+                                //     ? errors.password
+                                //       ? "is-invalid"
+                                //       : "is-valid"
+                                //     : ""
+                                // }`}
+                                // name="password"
+                                // onChange={(e) => {
+                                //   setNewPassword(e.target.value);
+                                //   checkSubmitchange;
+                                // }}
+                                onChange={(e) => {
+                                  setNewPassword(e.target.value);
+                                  // checkSubmitchange();
+                                }}
+                                // value={values.password}
+                                // isInvalid={errors.password}
+                                id="changePassword"
+                              />
+                              <div className="btn-changepassword">
+                                {clickSubmit_password && (
+                                  <span
+                                    className="btn-change-submit"
+                                    onClick={() => {
+                                      if (changePassword == "hide") {
+                                        setchangePassword("");
+                                        setconfirmSubmit(true);
+                                      } else {
+                                        setchangePassword("hide");
+                                        setconfirmSubmit(true);
+                                      }
+                                    }}
+                                  >
+                                    ยืนยัน
+                                  </span>
+                                )}
+                              </div>
+                              {/* {errors.name && touched.password && (
+                                <p className="error-helptext-modal-edit">
+                                  {errors.password}
+                                </p>
+                              )} */}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* </Form.Group> */}
 
               <div className="filed-input-adduser-modal">
                 <Form.Label className="field-description-input-edit">

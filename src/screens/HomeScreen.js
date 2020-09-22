@@ -177,7 +177,7 @@ export default function HomeScreen(props) {
               />
               {showAlertInvalidData ? (
                 <div class="alert alert-success alert-login" role="alert">
-                  **กรุณากรอกข้อมูลไม่ถูกต้อง**
+                  **กรุณากรอกข้อมูลให้ถูกต้อง**
                 </div>
               ) : showAlertStatusOff ? (
                 <div class="alert alert-success alert-login" role="alert">
