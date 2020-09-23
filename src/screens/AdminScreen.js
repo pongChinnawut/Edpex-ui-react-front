@@ -259,7 +259,8 @@ export default function AdminScreen(props) {
 
               <strong className="welcome-admin"> ยินดีต้อนรับคุณ </strong>
               <font className="welcome-name">
-                สุนทรีย์ภรณ์ กลิ่นปุบผาเริงภิรักภัดี
+                {userData.userInfo.name}
+                {/* สุนทรีย์ภรณ์ กลิ่นปุบผาเริงภิรักภัดี */}
               </font>
               <div className="admin-word-nav-user">
                 <div

@@ -129,11 +129,11 @@ export default function UserScreen(props) {
         <div style={{ display: "flex" }} onClick={goAdminPage}>
           <Flip>
             <img
-              src="ku4.png"
+              src="/images/ku44.png"
               width="65"
               height="50"
               className="d-inline-block align-top logo-ku-userpage"
-              alt=""
+              alt="logo-ku"
               // loading="lazy"
               onClick={goAdminPage}
               // data-toggle="tooltip"

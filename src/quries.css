@@ -503,6 +503,39 @@
     /* margin-right: 9px; */
   }
 
+  .field-description-swal-edit {
+    font-family: "Prompt";
+    font-size: 1.3rem;
+    font-weight: 400;
+    width: 45%;
+  }
+
+  #formcontrol-swal-edit {
+    font-size: 1.4rem;
+    font-family: "Prompt";
+    font-weight: 300;
+    height: 30px;
+  }
+
+  #formcontrol-swal-edit-password {
+    font-weight: 300;
+    height: 30px;
+    width: 86%;
+  }
+
+  #text-changepassword {
+    font-family: "Prompt";
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #006765;
+  }
+
+  .status-switch {
+    margin-left: 20px;
+    margin-bottom: 14px;
+    margin-top: 14px;
+  }
+
   /* .head-admin-welcome {
     display: flex;
     flex-direction: column;
@@ -548,10 +581,10 @@
     margin-bottom: 10px;
   }
 
-  .status-switch {
+  /* .status-switch {
     margin-top: 3px;
     margin-bottom: 10px;
-  }
+  } */
 
   .adduser-head-role {
     font-size: 1.1rem;

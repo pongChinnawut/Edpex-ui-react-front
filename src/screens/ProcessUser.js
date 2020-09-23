@@ -1,14 +1,38 @@
 import React from "react";
 import Cookie from "js-cookie";
 import UserScreen from "./UserScreen";
+import Axios from "axios";
 // import Backgroundd from "../screens/kuu.png";
 
 export default function ProcessUser(props) {
   const userData = Cookie.getJSON("userData");
+  const [id, setId] = React.useState(userData.userInfo.id);
+  const [arrProcessApi, setarrProcessApi] = React.useState([]);
+
+  // React.useEffect(() => {
+
+  // }, []);
+
+  const notFound = [{ description: "ไม่พบข้อมูลกระบวนการของคุณ" }];
 
   React.useEffect(() => {
     if (!userData) {
       props.history.push("/");
+    }
+    if (userData) {
+      Axios.get(
+        `http://localhost:8080/api/v1/getProcessByUser?userId=${id}`
+      ).then(
+        (res) => {
+          // alert(res.data.processList.length);
+          setarrProcessApi(res.data.processList);
+          console.log("get USER process success");
+        },
+        (error) => {
+          setarrProcessApi(notFound);
+          // alert(error.response.status);
+        }
+      );
     }
   }, []);
 
@@ -19,17 +43,23 @@ export default function ProcessUser(props) {
     "กระบวนการด้านความปลอดภัยของนิสิตและบุคลากรขององค์กรกระบวนการด้านความปลอดภัย",
     "กระบวนการด้านความปลอดภัยของนิสิตและบุคลากรขององค์กร",
     "กระบวนการด้านความปลอดภัยของนิสิตและบุคลากรขององค์กร",
+    "กระบวนการด้านความปลอดภัยของนิสิตและบุคลากรขององค์กรกระบวนการด้านความปลอดภัย",
+    "กระบวนการด้านความปลอดภัยของนิสิตและบุคลากรขององค์กร",
+    "กระบวนการด้านความปลอดภัยของนิสิตและบุคลากรขององค์กร",
   ];
 
-  const goInputFix = () => {
-    props.history.push("/inputfix");
+  const goInputFix = (id) => {
+    // props.history.push(`/inputfix/${id}`);
+    props.history.push(`/processuser/${id}`);
   };
 
   return (
     <div>
-      <UserScreen />
+      <header>
+        <UserScreen />
+      </header>
       <main>
-        <div className="container-fluid p-0  ">
+        <div className="container-fluid p-0">
           <div className="row no-gutters userscreen-fixinput">
             <div
               className="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 no-border"
@@ -44,14 +74,15 @@ export default function ProcessUser(props) {
                   <span className="process-header">
                     <span className="slash">|</span> กระบวนการที่รับผิดชอบ
                   </span>
-                  <span className="process-header-numprocess">5 กระบวนการ</span>
+                  <span className="process-header-numprocess">{`${arrProcessApi.length} กระบวนการ`}</span>
                 </div>
                 <div className="agency-name">
                   <span className="process-header-agency-name">
                     ชื่อหน่วยงาน
                   </span>
                   <span className="process-header-agency">
-                    กองบริหารการศึกษาวิชาการและนิสิตวิทยาเขต
+                    {userData.userInfo.agency.name}
+                    {/* กองบริหารการศึกษาวิชาการและนิสิตวิทยาเขต */}
                   </span>
                   {/* <span className="slash-process">/</span> */}
                   {/* <span className="process-header-numprocess">5 กระบวนการ</span> */}
@@ -60,11 +91,16 @@ export default function ProcessUser(props) {
               </div>
 
               <div className="background-inputfix ">
-                {arrProcess &&
-                  arrProcess.map((process, index) => (
-                    <div className="process-round" onClick={goInputFix}>
+                {arrProcessApi &&
+                  arrProcessApi.map((process, index) => (
+                    <div
+                      className="process-round"
+                      onClick={() => {
+                        goInputFix(process.id);
+                      }}
+                    >
                       <div className="card-number">{`${index + 1}`}</div>
-                      <div className="card-description">{`${process}`}</div>
+                      <div className="card-description">{`${process.description}`}</div>
                       <div className="icon-goprocess-big">
                         <div className="icon-goprocess-new">
                           <ion-icon
@@ -90,7 +126,7 @@ export default function ProcessUser(props) {
         University
       </footer>
       {/* ****************modal *************/}
-      <div
+      {/* <div
         class="modal fade"
         id="exampleModal"
         tabindex="-1"
@@ -128,7 +164,7 @@ export default function ProcessUser(props) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

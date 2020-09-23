@@ -1,16 +1,31 @@
 import React from "react";
 import Cookie from "js-cookie";
 import UserScreen from "./UserScreen";
+import Axios from "axios";
 import Footer from "./Footer";
 import { Form, FormGroup, Button } from "react-bootstrap";
 // import Backgroundd from "../screens/kuu.png";
 
 export default function ProcessUserButton(props) {
   const userData = Cookie.getJSON("userData");
+  const [processId, setprocessId] = React.useState(props.p);
+  const [arrInput, setarrInput] = React.useState([]);
+  const [yearSemesterNow, setyearSemesterNow] = React.useState("");
 
   React.useEffect(() => {
     if (!userData) {
       props.history.push("/");
+    }
+    if (userData) {
+      //ต้องตรวจสอบก่อนว่า userคนนี้
+      Axios.get(
+        `http://localhost:8080/api/v1/id/processinput?processId=${props.match.params.id}`
+      ).then((res) => {
+        setarrInput(res.data);
+        Axios.get("http://localhost:8080/api/v1/getSemester").then((res) => {
+          setyearSemesterNow(res.data);
+        });
+      });
     }
   }, []);
 
@@ -69,7 +84,7 @@ export default function ProcessUserButton(props) {
                 </div>
                 <div className="btn-recommence">
                   <span className="add-word">ปีการศึกษา</span>{" "}
-                  <span className="edit-word">2563</span>
+                  <span className="edit-word">{yearSemesterNow}</span>
                 </div>
               </div>
               {/* <span className="input-header-big">
@@ -78,13 +93,15 @@ export default function ProcessUserButton(props) {
                 <span className="edit-word">แก้ไขประวัติของข้อมูล</span>
               </span> */}
               <div className="background-inputfix">
-                {arrProcess &&
-                  arrProcess.map((process, index) => (
+                {arrInput.listInput &&
+                  arrInput.listInput.map((process, index) => (
                     <div className="inputfix-round">
                       <span className="card-inputfix-number">{`${
                         index + 1
                       }`}</span>
-                      <span className="card-inputfix-descrip">{process}</span>
+                      <span className="card-inputfix-descrip">
+                        {process.description}
+                      </span>
                       <div className="card-inputfix-button">
                         <button
                           className="btn-add"

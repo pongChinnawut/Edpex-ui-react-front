@@ -1,7 +1,9 @@
 import React from "react";
 import Axios from "axios";
 import EditUser from "./EditModal";
-import DeleteUser from "./EditModalDelete";
+import SwalEditModal from "./SwalEditModal";
+// import DeleteUser from "./EditModalDelete";
+import SwalEditModalDelete from "./SwalEditModalDelete";
 import ReactPaginate from "react-paginate";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 // import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
@@ -330,7 +332,7 @@ export default function TableUser(props) {
         ></div>
       </div>
       {showEditModal ? (
-        <EditUser
+        <SwalEditModal
           // showModalll={true}
           id={user_id}
           name={name}
@@ -345,7 +347,7 @@ export default function TableUser(props) {
         ""
       )}
       {showDeleteModal ? (
-        <DeleteUser
+        <SwalEditModalDelete
           // showModalll={true}
           id={user_id}
           name={name}

@@ -448,6 +448,32 @@ export default function EditModal(props) {
                                     ยืนยัน
                                   </span>
                                 )}
+                                <span
+                                  onClick={() => {
+                                    if (changePassword == "hide") {
+                                      setchangePassword("");
+                                      setNewPassword("");
+                                      setconfirmSubmit(false);
+                                      // if (newPassword != "") {
+                                      //   setNewPassword(newPassword);
+                                      // } else {
+                                      //   setNewPassword("");
+                                      // }
+                                    } else {
+                                      setchangePassword("hide");
+                                      setNewPassword("");
+                                      setconfirmSubmit(false);
+                                      // if (newPassword != "") {
+                                      //   setNewPassword(newPassword);
+                                      // } else {
+                                      //   setNewPassword("");
+                                      // }
+                                    }
+                                  }}
+                                  className="btn-change-cancle"
+                                >
+                                  ยกเลิก
+                                </span>
                               </div>
                               {/* {errors.name && touched.password && (
                                 <p className="error-helptext-modal-edit">
