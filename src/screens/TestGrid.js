@@ -88,7 +88,7 @@ export default function TestGrid() {
           </div>
         </div>
       </main>
-      <footer className="footer">
+      <footer className="footer-last-bottom">
         2020 © งานประกันคุณภาพการศึกษา สำนักวิทยาเขตกำแพงแสน Kasetsart
         University
       </footer>

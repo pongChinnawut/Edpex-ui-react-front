@@ -1944,6 +1944,7 @@ header .logo {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   border: 1px solid #03a96b;
+  /* text-decoration: none; */
 }
 
 .icon-goprocess-new:hover {
@@ -2183,6 +2184,93 @@ header .logo {
   font-size: 2.8rem;
 }
 
+/* .process-name {
+  font-family: "Prompt";
+  font-size: 1.8rem;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: -5px;
+  margin-bottom: 30px;
+  margin-top: -10px;
+} */
+
+.process-name-head-2 {
+  margin-top: -25px;
+  margin-bottom: 40px;
+  /* width: 100%; */
+  display: flex;
+  /* justify-content: center; */
+}
+
+.process-name-true-2 {
+  font-weight: 400;
+  font-family: "Prompt";
+  font-size: 2rem;
+  letter-spacing: 1px;
+  display: flex;
+  /* justify-content: center; */
+  width: 100%;
+}
+
+.process-name-in-2 {
+  border-left: 3px solid #03a96c67;
+  padding-left: 7px;
+  /* text-align: center; */
+}
+
+.name-descrip-pro-name-2 {
+  font-family: "Prompt";
+  font-size: 1.6rem;
+  background-color: #8da4c27e;
+  padding: 4px 10px 4px 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  margin-right: 10px;
+  font-weight: 500;
+  /* height: 35px; */
+  /* height: 30px;
+  width: 150px; */
+  /* width: 25%;
+  height: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* margin-bottom: 10px; */
+}
+
+/* .process-name-true {
+  font-weight: 500;
+  border-bottom: 4px solid #03a96cbd;
+  background: -webkit-linear-gradient(bottom, #03a96c7e, #03a96c23);
+  letter-spacing: 1px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+} */
+
+/* .name-descrip-pro-name {
+  font-family: "Prompt";
+  font-size: 1.6rem;
+  background-color: #8da4c28e;
+  padding: 5px 12px 5px 12px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  margin-right: 4px;
+} */
+
 #create-edit {
   margin: -2px 0 0 0;
   padding: 0;
@@ -2216,6 +2304,7 @@ header .logo {
   */
   box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.404);
   margin-bottom: 30px;
+  margin-left: -6px;
 }
 
 .add-word {
@@ -2224,8 +2313,8 @@ header .logo {
   justify-content: center;
   font-size: 1.5rem;
   background-color: #03a96cfd;
-  width: 100px;
-  height: 30px;
+  width: 90px;
+  height: 25px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2246,7 +2335,7 @@ header .logo {
   /* background-color: rgba(255, 255, 255, 0.822); */
   background-color: #2f3337d7;
   width: 80px;
-  height: 30px;
+  height: 25px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2723,14 +2812,38 @@ header .logo {
   background-color: #e4e6e5;
 }
 
-.footer {
+.footer-last-bottom {
   grid-area: footer;
-  background-color: #203040;
+  /* background-color: #203040;
   color: #ffffff;
   display: flex;
   align-items: center;
+  justify-content: center; */
+  background-color: #26292567;
+  /* height: 60px; */
+  text-align: center;
+  font-family: "Prompt";
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  border-top: 1px solid #7679777e;
 }
+
+/* .footer-last-bottom {
+  background-color: #26292567;
+  height: 60px;
+  font-family: "Prompt";
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #7679777e;
+} */
 
 .userscreen-fixinput-grid {
   min-height: 100% inherit;
@@ -2738,6 +2851,7 @@ header .logo {
 }
 
 /* คล้าย background-inputfix */
+/* อันนี้กริดไม่ได้ใช้ */
 .background-inputfix-grid {
   background: #bfc7c33d;
   width: 100%;
@@ -2752,3 +2866,17 @@ header .logo {
   box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.404);
   margin-bottom: 30px;
 }
+
+/* .background-inputfix {
+  background: #bfc7c33d;
+  width: 100%;
+  height: 100% inherit;
+  padding: 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.404);
+  margin-bottom: 30px;
+} */

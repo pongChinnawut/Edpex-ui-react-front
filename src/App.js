@@ -26,12 +26,13 @@ function App() {
         <Route path="/tableuser" component={TableUser}></Route>
         <Route path="/adduser" component={AddUser}></Route> */}
         <Route exact={true} path="/" component={HomeScreen}></Route>
+        <Route path="/homelogin" component={HomeScreen}></Route>
         <Route path="/adminscreen" component={AdminScreen}></Route>
         {/* <Route   path="/adminscreen?" component={AdminScreen}></Route> */}
         <Route path="/tableuser" component={TableUser}></Route>
         <Route path="/userscreen" component={UserScreen}></Route>
         <Route exact={true} path="/processuser" component={ProcessUser}></Route>
-        <Route path="/processuser/:id" component={ProcessUserEdit}></Route>
+        <Route path="/processuserinput" component={ProcessUserEdit}></Route>
         {/* <Route path="/inputfix/:id" component={ProcessUserEdit}></Route> */}
         <Route path="/mapoutput7" component={TestMapOutput}></Route>
         <Route path="/testnon" component={TestNon}></Route>

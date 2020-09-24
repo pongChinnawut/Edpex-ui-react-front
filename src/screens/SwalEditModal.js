@@ -250,17 +250,18 @@ export default function SwalEditModal(props) {
             <div className="phone-swal">
               <Form.Control
                 type="number"
-                onKeyDown={(e) => {
-                  formatInput(e);
-                }}
                 // onKeyDown={(e) => {
-                //   (e.keyCode === 69 ||
-                //     e.keyCode === 106 ||
-                //     e.keyCode === 107 ||
-                //     e.keyCode === 109 ||
-                //     e.keyCode === 190) &&
-                //     e.preventDefault();
+                //   formatInput(e);
                 // }}
+                onKeyDown={(e) => {
+                  (e.keyCode === 69 ||
+                    e.keyCode === 106 ||
+                    e.keyCode === 107 ||
+                    e.keyCode === 109 ||
+                    e.keyCode === 189 ||
+                    e.keyCode === 190) &&
+                    e.preventDefault();
+                }}
                 // ValidationExpression="^[0-9](\.[0-9]+)?$"
                 className={`form-control ${
                   touched.phone

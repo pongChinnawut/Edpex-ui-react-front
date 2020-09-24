@@ -2,11 +2,12 @@ import React from "react";
 import Cookie from "js-cookie";
 import UserScreen from "./UserScreen";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 // import Backgroundd from "../screens/kuu.png";
 
 export default function ProcessUser(props) {
   const userData = Cookie.getJSON("userData");
-  const [id, setId] = React.useState(userData.userInfo.id);
+  const [id, setId] = React.useState("");
   const [arrProcessApi, setarrProcessApi] = React.useState([]);
 
   // React.useEffect(() => {
@@ -16,25 +17,29 @@ export default function ProcessUser(props) {
   const notFound = [{ description: "ไม่พบข้อมูลกระบวนการของคุณ" }];
 
   React.useEffect(() => {
-    if (!userData) {
+    if (userData == undefined) {
       props.history.push("/");
     }
     if (userData) {
-      Axios.get(
-        `http://localhost:8080/api/v1/getProcessByUser?userId=${id}`
-      ).then(
-        (res) => {
-          // alert(res.data.processList.length);
-          setarrProcessApi(res.data.processList);
-          console.log("get USER process success");
-        },
-        (error) => {
-          setarrProcessApi(notFound);
-          // alert(error.response.status);
-        }
-      );
+      setId(userData.userInfo.id);
     }
   }, []);
+
+  React.useEffect(() => {
+    Axios.get(
+      `http://localhost:8080/api/v1/getProcessByUser?userId=${id}`
+    ).then(
+      (res) => {
+        // alert(res.data.processList.length);
+        setarrProcessApi(res.data.processList);
+        console.log("get USER process success");
+      },
+      (error) => {
+        setarrProcessApi(notFound);
+        // alert(error.response.status);
+      }
+    );
+  }, [id]);
 
   const arrProcess = [
     "กระบวนการไฟฟ้า",
@@ -48,76 +53,90 @@ export default function ProcessUser(props) {
     "กระบวนการด้านความปลอดภัยของนิสิตและบุคลากรขององค์กร",
   ];
 
-  const goInputFix = (id) => {
-    // props.history.push(`/inputfix/${id}`);
-    props.history.push(`/processuser/${id}`);
-  };
+  // const goInputFix = (id) => {
+  //   props.history.push(`/processuser/${id}`);
+  // };
 
   return (
-    <div>
-      <header>
+    <div className="grid-container">
+      <header className="header">
         <UserScreen />
       </header>
-      <main>
-        <div className="container-fluid p-0">
-          <div className="row no-gutters userscreen-fixinput">
-            <div
-              className="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 no-border"
-              style={{ backgroundColor: "#e4e6e5" }}
-            ></div>
-            <div
-              className="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 no-border"
-              style={{ backgroundColor: "#e4e6e5" }}
-            >
-              <div className="process-header-big">
-                <div className="processnum">
-                  <span className="process-header">
-                    <span className="slash">|</span> กระบวนการที่รับผิดชอบ
-                  </span>
-                  <span className="process-header-numprocess">{`${arrProcessApi.length} กระบวนการ`}</span>
+      <main className="main">
+        <div className="content">
+          <div className="container-fluid p-0">
+            <div className="row no-gutters userscreen-fixinput-grid">
+              <div
+                className="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 "
+                style={{ backgroundColor: "#e4e6e5" }}
+              ></div>
+              <div
+                className="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 "
+                style={{ backgroundColor: "#e4e6e5" }}
+              >
+                <div className="process-header-big">
+                  <div className="processnum">
+                    <span className="process-header">
+                      <span className="slash">|</span> กระบวนการที่รับผิดชอบ
+                    </span>
+                    <span className="process-header-numprocess">{`${arrProcessApi.length} กระบวนการ`}</span>
+                  </div>
+                  <div className="agency-name">
+                    <span className="process-header-agency-name">
+                      ชื่อหน่วยงาน
+                    </span>
+                    <span className="process-header-agency">
+                      {userData && userData.userInfo.agency.name}
+                      {/* กองบริหารการศึกษาวิชาการและนิสิตวิทยาเขต */}
+                    </span>
+                    {/* <span className="slash-process">/</span> */}
+                    {/* <span className="process-header-numprocess">5 กระบวนการ</span> */}
+                    {/* <div>{`${arrProcess.length} กระบวนการ`}</div> */}
+                  </div>
                 </div>
-                <div className="agency-name">
-                  <span className="process-header-agency-name">
-                    ชื่อหน่วยงาน
-                  </span>
-                  <span className="process-header-agency">
-                    {userData.userInfo.agency.name}
-                    {/* กองบริหารการศึกษาวิชาการและนิสิตวิทยาเขต */}
-                  </span>
-                  {/* <span className="slash-process">/</span> */}
-                  {/* <span className="process-header-numprocess">5 กระบวนการ</span> */}
-                  {/* <div>{`${arrProcess.length} กระบวนการ`}</div> */}
-                </div>
-              </div>
 
-              <div className="background-inputfix ">
-                {arrProcessApi &&
-                  arrProcessApi.map((process, index) => (
-                    <div
-                      className="process-round"
-                      onClick={() => {
-                        goInputFix(process.id);
-                      }}
-                    >
-                      <div className="card-number">{`${index + 1}`}</div>
-                      <div className="card-description">{`${process.description}`}</div>
-                      <div className="icon-goprocess-big">
-                        <div className="icon-goprocess-new">
-                          <ion-icon
-                            id="ionicon-arrow"
-                            name="arrow-forward-circle-outline"
-                          ></ion-icon>
-                          <span className="process-toinputfix">กรอกข้อมูล</span>
+                <div className="background-inputfix ">
+                  {arrProcessApi &&
+                    arrProcessApi.map((process, index) => (
+                      <div
+                        className="process-round"
+                        // onClick={() => {
+                        //   goInputFix(process.id);
+                        // }}
+                      >
+                        <div className="card-number">{`${index + 1}`}</div>
+                        <div className="card-description">{`${process.description}`}</div>
+
+                        <div className="icon-goprocess-big">
+                          <Link
+                            style={{ textDecoration: "none" }}
+                            className="icon-goprocess-new"
+                            to={{
+                              pathname: "/processuserinput",
+                              state: { processId: process.id },
+                            }}
+                          >
+                            {/* <div className="icon-goprocess-new"> */}
+                            <ion-icon
+                              id="ionicon-arrow"
+                              name="arrow-forward-circle-outline"
+                            ></ion-icon>
+
+                            <span className="process-toinputfix">
+                              กรอกข้อมูล
+                            </span>
+                            {/* </div> */}
+                          </Link>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                </div>
               </div>
+              <div
+                className="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 "
+                style={{ backgroundColor: "#E4E6E5" }}
+              ></div>
             </div>
-            <div
-              className="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 no-border"
-              style={{ backgroundColor: "#e4e6e5" }}
-            ></div>
           </div>
         </div>
       </main>

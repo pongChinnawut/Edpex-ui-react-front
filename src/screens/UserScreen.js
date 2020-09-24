@@ -47,18 +47,20 @@ export default function UserScreen(props) {
   let history = useHistory();
 
   React.useEffect(() => {
-    setname(userData.userInfo.name);
-    const arr = [];
-    userData.userInfo.roles.forEach((cur, index) => {
-      arr.push(cur.id);
-    });
-    if (arr.includes(1)) {
-      setroleStatus("admin");
+    if (userData != undefined) {
+      setname(userData.userInfo.name);
+      const arr = [];
+      userData.userInfo.roles.forEach((cur, index) => {
+        arr.push(cur.id);
+      });
+      if (arr.includes(1)) {
+        setroleStatus("admin");
+      }
+      if (arr.includes(2)) {
+        setroleStatus("user");
+      }
+      //ขาด executive
     }
-    if (arr.includes(2)) {
-      setroleStatus("user");
-    }
-    //ขาด executive
   }, []);
 
   React.useEffect(() => {
