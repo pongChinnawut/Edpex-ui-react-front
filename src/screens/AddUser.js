@@ -307,7 +307,7 @@ export default function AddUser(props) {
                 <Form.Group controlId="validationFormik103" id="inName">
                   <div className="filed-input-adduser ">
                     <Form.Label className="field-description-input">
-                      ชื่อ-นามสกุล
+                      *ชื่อ-นามสกุล
                     </Form.Label>
 
                     <div className="name">
@@ -354,7 +354,7 @@ export default function AddUser(props) {
                 >
                   <div className="filed-input-adduser ">
                     <Form.Label className="field-description-input">
-                      เบอร์โทรศัพท์
+                      *เบอร์โทรศัพท์
                     </Form.Label>
                     <div className="phone">
                       <Form.Control
@@ -395,7 +395,7 @@ export default function AddUser(props) {
                 >
                   <div className="filed-input-adduser">
                     <Form.Label className="field-description-input">
-                      ชื่อผู้ใช้งาน
+                      *ชื่อผู้ใช้งาน
                     </Form.Label>
                     <div className="username">
                       <Form.Control
@@ -434,7 +434,7 @@ export default function AddUser(props) {
                 >
                   <div className="filed-input-adduser">
                     <Form.Label className="field-description-input">
-                      รหัสผ่าน
+                      *รหัสผ่าน
                     </Form.Label>
                     <div className="password">
                       <Form.Control
@@ -472,7 +472,7 @@ export default function AddUser(props) {
               <div className="role-and-role">
                 <div className="filed-input-adduser" id="rolee">
                   <Form.Label className="field-description-input">
-                    สิทธิ์การใช้งาน
+                    *สิทธิ์การใช้งาน
                   </Form.Label>
                   <div className="role">
                     <select
@@ -497,7 +497,7 @@ export default function AddUser(props) {
                       // }}
                     >
                       <option value="" selected disabled hidden>
-                        กรุณาระบุสิทธิ์การใช้งาน*
+                        *กรุณาระบุสิทธิ์การใช้งาน*
                       </option>
                       {roles_fake &&
                         roless.map((role, index) => (
@@ -526,7 +526,7 @@ export default function AddUser(props) {
               {/* </Form.Group> */}
               <div className="filed-input-adduser">
                 <Form.Label className="field-description-input">
-                  ชื่อหน่วยงาน
+                  *ชื่อหน่วยงาน
                 </Form.Label>
                 <div className="agency">
                   <select

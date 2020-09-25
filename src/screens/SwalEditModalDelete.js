@@ -193,10 +193,11 @@ export default function SwalEditModalDelete(props) {
   };
 
   const closeModal = () => {
-    setShowModalDelete(false);
+    // setShowModalDelete(false);
     // console.log(showModalEdit);
     // props.location.push("/adminscreen");
-    window.location.reload(true);
+    props.fnDel(false);
+    // window.location.reload(true);
   };
 
   return (
@@ -208,6 +209,7 @@ export default function SwalEditModalDelete(props) {
         backgroundColor: "#E4E6E5",
         borderRadius: `7px`,
       }}
+      show={showEditDelete}
     >
       <div className="adduser-header-edit-modal">
         <div className="head-modal-and-icon">

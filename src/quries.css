@@ -1021,6 +1021,18 @@
     text-align: center;
   }
 
+  .add-transaction-head {
+    font-family: "Prompt";
+    font-size: 1.7rem;
+  }
+
+  .questionn {
+    font-family: "Prompt";
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 3px 5px 3px 5px;
+  }
+
   .table-user {
     /* margin: 0 0 0 0; */
     /* margin-left: 20%; */
@@ -1250,6 +1262,41 @@
     width: 85%;
   }
 
+  .add-transaction-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+
+  .questionn {
+    font-family: "Prompt";
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 3px 40px 3px 40px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+  }
+
+  .btn-submit-add-trans {
+    font-family: "Prompt";
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 3px 30px 3px 30px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+
+  .btn-cancle-add-trans {
+    font-family: "Prompt";
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 3px 30px 3px 30px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+
   /* .img-right {
     visibility: hidden;
     height: 0;
@@ -1310,6 +1357,52 @@
     margin: 10% 3% 3% 3%; /* ปรับไปแค่บนล่าง*/
     background-color: "#E4E6E5";
     height: 100%;
+  }
+
+  .add-transaction-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  .questionn {
+    font-family: "Prompt";
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 3px 35px 3px 35px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+  }
+
+  .btn-submit-add-trans {
+    font-family: "Prompt";
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 2px 27px 2px 27px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .btn-cancle-add-trans {
+    font-family: "Prompt";
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 2px 27px 2px 27px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+
+  .error-add-trans-value {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 4px;
+    font-family: "Prompt";
+    font-size: 1.1rem;
   }
 
   /* .field-description-input-edit {

@@ -13,6 +13,8 @@ import ProcessUserEdit from "./screens/ProcessUserButton";
 import TestNon from "./screens/TestNon";
 import TestFormik from "./screens/TestFormik";
 import TestGrid from "./screens/TestGrid";
+import AddTransaction from "./screens/AddTransaction";
+import HistoryTransactionUser from "./screens/HistoryTransactionUser";
 // import TestModalMDB from "./screens/TestModalMDB";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
@@ -33,6 +35,11 @@ function App() {
         <Route path="/userscreen" component={UserScreen}></Route>
         <Route exact={true} path="/processuser" component={ProcessUser}></Route>
         <Route path="/processuserinput" component={ProcessUserEdit}></Route>
+        <Route path="/addtransaction" component={AddTransaction}></Route>
+        <Route
+          path="/historytransactionuser"
+          component={HistoryTransactionUser}
+        ></Route>
         {/* <Route path="/inputfix/:id" component={ProcessUserEdit}></Route> */}
         <Route path="/mapoutput7" component={TestMapOutput}></Route>
         <Route path="/testnon" component={TestNon}></Route>

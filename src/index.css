@@ -2004,7 +2004,7 @@ header .logo {
 /* background-image: linear-gradient(#4caf4f07, #4caf4f33); */
 
 /* *************************************************************************************
-**************************************** PROCESS USER EDIT CREATE PAGE
+**************************************** PROCESS USER EDIT-CREATE PAGE
 *************************************************************************************/
 
 .userscreen-fixinput {
@@ -2426,7 +2426,9 @@ header .logo {
   border: 3px solid #000;
 } */
 
-/* ******************************** Footer*************************** */
+/* **************************************************************** */
+/* ********** Footer************* */
+/* **************************************************************** */
 .footer-last {
   background-color: #26292567;
   height: 60px;
@@ -2465,6 +2467,10 @@ header .logo {
 .footer-last {
   visibility: hidden;
 }
+
+/* **************************************************************** */
+/* ********** Table super responsive************* */
+/* **************************************************************** */
 
 ******************************************************* Test table react superResponsive
 /* inspired by: https://css-tricks.com/responsive-data-tables/ */
@@ -2550,6 +2556,207 @@ header .logo {
   }
 }
 
+/* **************************************************************** */
+/* ********** Add Transaction************* */
+/* **************************************************************** */
+
+.add-transaction-head {
+  font-family: "Prompt";
+  font-size: 1.9rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #2f3337;
+  width: 100%;
+  padding: 15px;
+  /* height: 50px; */
+  margin-top: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+#success-icon-add-trans {
+  /* margin-right: 1px; */
+  /*margin-top: -1px;
+  */
+  color: #03a948;
+  /* background-color: #9bddc5c4; */
+  font-size: 15rem;
+  /* border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px; */
+}
+
+.success-swl {
+  font-family: "Prompt";
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+
+.name-head-transaction {
+  font-family: "Prompt";
+  font-size: 1.5rem;
+  display: flex;
+  margin-left: 25px;
+  margin-bottom: 7px;
+  color: #000;
+  font-weight: 400;
+}
+
+#formcontrol-swal-add-trans {
+  background-color: rgba(0, 0, 0, 0.048);
+  font-size: 1.4rem;
+  font-family: "Prompt";
+  font-weight: 300;
+  height: 35px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  /* padding-left: 20px; */
+  width: 86%;
+  border: 1px solid rgba(0, 0, 0, 0.295);
+  margin-bottom: 0px;
+  text-align: center;
+  color: #000;
+  /* display: flex;
+  justify-content: center; */
+}
+
+#formcontrol-swal-add-trans-area {
+  background-color: rgba(0, 0, 0, 0.048);
+  font-size: 1.4rem;
+  font-family: "Prompt";
+  font-weight: 300;
+  color: #000;
+  /* height: 50px; */
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  /* padding-left: 20px; */
+  width: 86%;
+  border: 1px solid rgba(0, 0, 0, 0.295);
+  /* margin-bottom: 9px; */
+  /* text-align: center; */
+  /* display: flex;
+  justify-content: center; */
+}
+
+.inputname-add-trans {
+  font-family: "Prompt";
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0px 8px 0px 8px;
+  margin-bottom: 10px;
+  /* display: flex; */
+  /* margin-top: 10px; */
+}
+
+.questionn {
+  font-family: "Prompt";
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: -webkit-linear-gradient(
+    bottom,
+    rgba(254, 254, 255, 0.678),
+    #b6c6db
+  );
+  color: #000;
+  padding: 4px 6px 4px 6px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  margin-right: 10px;
+}
+
+.questionn-descrip {
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: #8da4c24b;
+  padding: 6px;
+  letter-spacing: 1px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.name-swal-add-trans {
+  display: flex;
+  justify-content: center;
+}
+
+.error-add-trans-value {
+  display: flex;
+  margin-left: 45px;
+  margin-top: 6px;
+  font-family: "Prompt";
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: red;
+}
+
+/* #sw {
+  width: 50em;
+} */
+
+.btn-submit-add-trans {
+  font-family: "Prompt";
+  font-size: 1.7rem;
+  font-weight: 300;
+  padding: 5px 40px 5px 40px;
+  background: #03a96cb6;
+  border: 0px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.btn-submit-add-trans:hover {
+  background: #03a96b;
+  color: #fff;
+}
+
+.btn-cancle-add-trans {
+  font-family: "Prompt";
+  font-size: 1.7rem;
+  font-weight: 300;
+  padding: 5px 40px 5px 40px;
+  background: #03a96c31;
+  border: 0px;
+  border: 1px solid #03a96b;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.btn-cancle-add-trans:hover {
+  background: #03a96c71;
+  color: #fff;
+}
+
 /* ******************************** pagination **********************************/
 .pagination-big {
   width: 100%;
@@ -2618,7 +2825,7 @@ header .logo {
   border-radius: unset;
 }
 
-/* *****************************************SWAL edit modal */
+/* *****************************************SWAL edit modal **************************************/
 .swal-modal {
   background-color: #e4e6e5;
   border: 0px solid white;
@@ -2784,7 +2991,7 @@ header .logo {
   color: #000;
 }
 
-/* *******************************TEST  GRID */
+/* *******************************  GRID Contaniner****************************************** */
 
 .grid-container {
   display: grid;
@@ -2880,3 +3087,13 @@ header .logo {
   box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.404);
   margin-bottom: 30px;
 } */
+
+/* ************************************************************************ */
+/* *********  History transaction user  */
+/* ************************************************************************ */
+
+.table-transactionHis-grid {
+  min-height: 100% inherit;
+  background-color: #e4e6e5;
+  text-align: center;
+}

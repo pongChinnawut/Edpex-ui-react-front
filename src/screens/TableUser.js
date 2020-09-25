@@ -46,6 +46,14 @@ export default function TableUser(props) {
     receiveData();
   }, [offset, currentPage]);
 
+  const setShowAgain = () => {
+    setshowEditModal(false);
+  };
+
+  const setShowAgainDel = () => {
+    setshowDeleteModal(false);
+  };
+
   // React.useEffect(() => {
   //   console.log(slice);
   // }, [slice]);
@@ -342,6 +350,7 @@ export default function TableUser(props) {
           role={role}
           agency={{ id: agency, name: agency_descrip }}
           status={status}
+          fn={setShowAgain}
         />
       ) : (
         ""
@@ -357,6 +366,7 @@ export default function TableUser(props) {
           role={role}
           agency={{ id: agency, name: agency_descrip }}
           status={status}
+          fnDel={setShowAgainDel}
         />
       ) : (
         ""

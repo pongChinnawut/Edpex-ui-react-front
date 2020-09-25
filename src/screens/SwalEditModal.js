@@ -63,8 +63,9 @@ export default function SwalEditModal(props) {
   const closeModal = () => {
     // console.log(showModalEdit);
     // props.location.push("/adminscreen");
-    setShowModalEdit(false);
-    window.location.reload(true);
+    // setShowModalEdit(false);
+    props.fn(false);
+    // window.location.reload();
   };
 
   const toggleModal = () => {
@@ -190,6 +191,7 @@ export default function SwalEditModal(props) {
     <SweetAlert
       // title={"Uses render props"}
       showConfirm={false}
+      show={showModalEdit}
       //   id="xvxv"
       style={{
         width: `60em`,

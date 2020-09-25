@@ -2,7 +2,11 @@ import React from "react";
 import Cookie from "js-cookie";
 import UserScreen from "./UserScreen";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import SweetAlert from "react-bootstrap-sweetalert";
+import AddTransaction from "./AddTransaction";
+import HistoryTransactionUser from "./HistoryTransactionUser";
 import { Form, FormGroup, Button } from "react-bootstrap";
 // import Backgroundd from "../screens/kuu.png";
 
@@ -10,24 +14,42 @@ export default function ProcessUserButton(props) {
   const userData = Cookie.getJSON("userData");
   // const [processId, setprocessId] = React.useState(props.p);
   const [arrInput, setarrInput] = React.useState([]);
+  const [showAddTransaction, setshowAddTransaction] = React.useState(false);
   const [yearSemesterNow, setyearSemesterNow] = React.useState("");
+  const [processId, setprocessId] = React.useState("");
+  const [inputId, setinputId] = React.useState("");
+  const [inputName, setinputName] = React.useState("");
 
   React.useEffect(() => {
     if (userData == undefined || !userData) {
-      props.history.push("/homelogin");
+      props.history.puletsh("/homelogin");
     }
+    // let processId = "";
     if (userData) {
+      if (
+        props.location.state &&
+        (props.location.state.processId != "" ||
+          props.location.state.processId != undefined)
+      ) {
+        Cookie.set("process_id", props.location.state.processId);
+        setprocessId(props.location.state.processId);
+      } else {
+        setprocessId(Cookie.getJSON("process_id"));
+      }
+
       //ต้องตรวจสอบก่อนว่า userคนนี้
-      Axios.get(
-        `http://localhost:8080/api/v1/id/processinput?processId=${props.location.state.processId}`
-      ).then((res) => {
-        setarrInput(res.data);
-        Axios.get("http://localhost:8080/api/v1/getSemester").then((res) => {
-          setyearSemesterNow(res.data);
+      if (processId != "") {
+        Axios.get(
+          `http://localhost:8080/api/v1/id/processinput?processId=${processId}`
+        ).then((res) => {
+          setarrInput(res.data);
+          Axios.get("http://localhost:8080/api/v1/getSemester").then((res) => {
+            setyearSemesterNow(res.data);
+          });
         });
-      });
+      }
     }
-  }, []);
+  }, [processId]);
 
   const arrProcess = [
     "จำนวนครั้งที่ไฟฟ้าดับ2",
@@ -42,6 +64,10 @@ export default function ProcessUserButton(props) {
 
   const gotoProcessInBut = () => {
     props.history.push("/processuser");
+  };
+
+  const setShowAgain = (status) => {
+    setshowAddTransaction(status);
   };
 
   return (
@@ -128,8 +154,11 @@ export default function ProcessUserButton(props) {
                         <div className="card-inputfix-button">
                           <button
                             className="btn-add"
-                            data-toggle="modal"
-                            data-target="#exampleModalCenter"
+                            onClick={() => {
+                              setshowAddTransaction(true);
+                            }}
+                            // data-toggle="modal"
+                            // data-target="#exampleModalCenter"
                           >
                             <div
                               style={{
@@ -137,13 +166,27 @@ export default function ProcessUserButton(props) {
                                 justifyContent: "center",
                                 alignItems: "center",
                                 flexDirection: "column",
+                                textDecoration: "none",
+                                color: "#000",
                               }}
+                              onClick={() => {
+                                setinputId(process.id);
+                                setinputName(process.description);
+                              }}
+                              // to={{
+                              //   pathname: "/addtransaction",
+                              //   state: { inputId: process.id },
+                              // }}
                             >
                               <ion-icon
                                 name="add-circle-outline"
-                                style={{ fontSize: `20px`, marginTop: `-2px` }}
+                                style={{
+                                  fontSize: `20px`,
+                                  marginTop: `-2px`,
+                                }}
                               ></ion-icon>
                               <span
+
                               // type="button"
                               // class="btn btn-primary"
                               // data-toggle="modal"
@@ -155,20 +198,29 @@ export default function ProcessUserButton(props) {
                           </button>
                           <button className="btn-edit">
                             {" "}
-                            <div
+                            <Link
                               style={{
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
                                 flexDirection: "column",
+                                textDecoration: "none",
+                                color: "#000",
+                              }}
+                              to={{
+                                pathname: "/historytransactionuser",
+                                state: { inputId: process.id },
                               }}
                             >
                               <ion-icon
                                 name="folder-open-outline"
-                                style={{ fontSize: `20px`, marginTop: `-2px` }}
+                                style={{
+                                  fontSize: `20px`,
+                                  marginTop: `-2px`,
+                                }}
                               ></ion-icon>
                               <span>ประวัติข้อมูล</span>
-                            </div>
+                            </Link>
                           </button>
                         </div>
                       </div>
@@ -288,6 +340,14 @@ export default function ProcessUserButton(props) {
           </div>
         </div>
       </div>
+      {showAddTransaction && (
+        <AddTransaction
+          inputId={inputId}
+          inputName={inputName}
+          showw={true}
+          fn={setShowAgain}
+        />
+      )}
     </div>
   );
 }
