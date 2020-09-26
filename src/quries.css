@@ -46,6 +46,10 @@
     margin-top: 10px;
   }
 
+  .input-header-big-input-history {
+    font-size: 2.4rem;
+  }
+
   .label-in-role {
     font-family: "Prompt";
     font-size: 1rem;
@@ -148,6 +152,37 @@
     margin-top: -5px;
     color: #03a91fa8;
     --ionicon-stroke-width: 70px;
+  }
+
+  .process-name-his-point {
+    width: 20%;
+  }
+
+  .input-header-big-input-history {
+    font-size: 2.3rem;
+  }
+
+  .his-word-year {
+    font-size: 1.2rem;
+  }
+
+  .year-number-his {
+    width: 60px;
+    height: 22px;
+    margin: 2px 6px 0 0px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #2f3337d7;
+  }
+
+  .year-descrip-his {
+    width: 70px;
+    height: 22px;
+    margin: 2px 0px 0 12px;
+    font-weight: 400;
+    font-family: "Prompt";
+    color: #e4e6e5;
+    background-color: #03a96cfd;
   }
 
   tbody td {
@@ -453,6 +488,17 @@
     font-size: 2rem;
   }
 
+  .back-and-inputfix-history {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-recommence-history-year {
+    margin-top: 5px;
+    margin-bottom: 7px;
+  }
+
   .adduser-head-table {
     font-size: 3.5rem;
     font-weight: 800;
@@ -490,7 +536,7 @@
     font-size: 1.4rem;
     margin: 15px auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     list-style: none;
     outline: none;
     width: 100%;
@@ -516,6 +562,21 @@
     -o-border-radius: 10px;
     margin-top: 8px;
     margin-bottom: 5px;
+  }
+
+  .slash {
+    font-size: 0rem;
+    position: relative;
+    top: 0px;
+    visibility: hidden;
+  }
+
+  .input-header-big-history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 8px;
   }
 }
 
@@ -1033,6 +1094,35 @@
     padding: 3px 5px 3px 5px;
   }
 
+  .btn-recommence-history-year {
+    margin-top: 0px;
+    margin-bottom: 7px;
+  }
+
+  .process-his,
+  .process-his-point {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .process-name-his,
+  .process-name-his-point {
+    width: 50%;
+  }
+
+  .process-name-history {
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-header-big-history {
+    margin-top: 15px;
+    margin-bottom: 9px;
+  }
+
   .table-user {
     /* margin: 0 0 0 0; */
     /* margin-left: 20%; */
@@ -1297,6 +1387,21 @@
     margin-right: 10px;
   }
 
+  .input-header-big-input-history {
+    font-size: 2rem;
+    /* margin-bottom: -5px; */
+  }
+
+  .btn-recommence-history-year {
+    margin-top: -5px;
+    margin-bottom: 6px;
+  }
+
+  .process-name-his,
+  .process-name-his-point {
+    margin-bottom: 5px;
+  }
+
   /* .img-right {
     visibility: hidden;
     height: 0;
@@ -1403,6 +1508,10 @@
     margin-top: 4px;
     font-family: "Prompt";
     font-size: 1.1rem;
+  }
+
+  .input-header-big-input-history {
+    font-size: 1.7rem;
   }
 
   /* .field-description-input-edit {
